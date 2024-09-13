@@ -556,7 +556,7 @@ check_is_zip <- function(ct) {
   # "https://www.fueleconomy.gov/feg/epadata/16data.zip" comes with
   # MIME type "application/x-zip-compressed"
   # see https://github.com/r-lib/usethis/issues/573
-  allowed <- c("application/zip", "application/x-zip-compressed")
+  allowed <- c("application/zip", "application/x-zip-compressed", "application/octet-stream")
   if (!ct %in% allowed) {
     ui_abort(c(
       "Download does not have MIME type {.val application/zip}.",
